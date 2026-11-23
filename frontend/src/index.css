@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* الوضع الليلي بالـ class بدل إعدادات النظام */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-quran: "Amiri Quran", "Amiri", serif;
+  --font-ui: "Cairo", system-ui, sans-serif;
+
+  /* أخضر داكن (الهوية) */
+  --color-brand-50: #eef6f1;
+  --color-brand-100: #d6eadd;
+  --color-brand-600: #1f6b4a;
+  --color-brand-700: #17563b;
+  --color-brand-800: #11442f;
+  --color-brand-900: #0b3122;
+
+  /* ذهبي (للتفاصيل) */
+  --color-gold-400: #d4b15f;
+  --color-gold-500: #c19a3e;
+  --color-gold-600: #a07f2d;
+
+  /* ورقي دافئ (الخلفية) */
+  --color-paper: #faf6ec;
+  --color-paper-dark: #14211b;
+}
+
+html {
+  direction: rtl;
+  font-family: var(--font-ui);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: #2b2b26;
+}
+
+html.dark body {
+  background-color: var(--color-paper-dark);
+  color: #e8e4d6;
+}
